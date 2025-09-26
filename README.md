@@ -1,4 +1,4 @@
 # TareasDeInterfaces
 Ejercicios de interfaces hechos
->[!info]
+>[!warn]
 > Se añadiran mas y soluciones de algunos ejercicios
