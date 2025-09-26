@@ -2,4 +2,4 @@
 Ejercicios de interfaces hechos
 
 > [!NOTE]
-> Information the user should notice even if skimming.
+> Aqui se añadiran todos los **los ejercicios realizados en clase**
