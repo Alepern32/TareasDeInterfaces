@@ -1,4 +1,5 @@
 # TareasDeInterfaces
 Ejercicios de interfaces hechos
->[! info]
-> Se añadiran mas y soluciones de algunos ejercicios
+
+> [!NOTE]
+> Information the user should notice even if skimming.
