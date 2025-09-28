@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-  	<style>
-/*Para todo <span> que esté dentro de un <p> (descendiente)*/
-p span {
-	   background-color: aqua;
-}
-/*Para todo <span> que sea hijo directo de un <div>*/
-div > span {
-	background-color: bisque;
-}
-/*Para todo <b> que vaya inmediatamente después de un <span> (hermano adyacente)*/
-span + b {
-      	   margin: 6px;
-  	   background-color: burlywood;
- 	}
-/*Para todo <div> que sea hermano posterior de un <p> dentro del mismo nivel*/	
-p ~ div {
-      	   border: 1px solid cadetblue;
- 	}
- 	</style>
-    </head>
-    <body>  
-	<div>
-    	   <p>Primer párrafo.</p> <p><span>Primera palabra</span> del segundo párrafo.</p>
-    	   <div>
-               <p>
-            	<span>Primera palabra</span>
-            	<b>remarcada</b> <strong>e importante</strong> 
-				dentro de un párrafo más interior</p>
-        	    <span>Sólo es una frase <b>suelta</b>.</span>
-    	   </div>
-	</div>		 
-    </body>
-</html
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejemplo Selectores CSS - [TU NOMBRE O SIGLAS]</title>
+
+    <style>
+      /* CAMBIO 1: Añadí color de texto y padding al span dentro de p */
+      p span {
+        background-color: aqua;
+        color: darkblue; /*Añadido*/
+        padding: 3px;    /*Añadido*/
+      }
+
+      /* CAMBIO 2: Span hijo directo de div → se cambió color de fondo y borde */
+      div > span {
+        background-color: bisque;
+        border: 1px solid orange; /*Añadido*/
+        font-weight: bold;        /*Añadido*/
+      }
+
+      /* CAMBIO 3: <b> después de <span> ahora tiene más estilo visual */
+      span + b {
+        margin: 6px;
+        background-color: burlywood;
+        padding: 4px;       /*Añadido*/
+        border-radius: 4px; /*Añadido*/
+      }
+
+      /* CAMBIO 4: div hermano posterior de p ahora con fondo extra */
+      p ~ div {
+        border: 1px solid cadetblue;
+        background-color: #eef9f9; /*Añadido*/
+        margin-top: 10px;          /*Añadido*/
+      }
+
+      /* CAMBIO EXTRA: añadimos estilo al body */
+      body {
+        font-family: Arial, sans-serif; 
+        margin: 30px;                  
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>Primer párrafo.</p>
+      <p><span>Primera palabra</span> del segundo párrafo.</p>
+
+      <div>
+        <p>
+          <span>Primera palabra</span>
+          <b>remarcada</b>
+          <strong>e importante</strong> dentro de un párrafo más interior
+        </p>
+
+        <span>Sólo es una frase <b>suelta</b>.</span>
+      </div>
+    </div>
+
+  </body>
+</html>
+
+
