@@ -1,49 +1,116 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    	<style>
-    	[selected] {color: chartreuse;}
-    	[disabled] {background-color: lightslategray;}
-    	[name="provincia"] {font-family: cursive;}
-    	[placeholder~="su"] {border: 2px solid red;}
-    	[name|="opt"] {font-style: oblique;}
-    	[name^="opt"] {font-weight: bolder;}
-    	[name$="ado"] {background-color: gainsboro;}   
-    	[type*="ex"] {background-color: antiquewhite; margin: 3px;}
-    	</style>
-	</head>
-	<body>
-    		<form action="#" method="get">
-        		<fieldset>
-            	<legend>Dirección:</legend>
-            	<label for="nombre">Introduzca su nombre:</label>
-            	<input type="text" name="nombre" placeholder="Aquí su nombre..."/>
-            	<br/>
-            	<label for="apellido">Introduzca su apellido:</label>
-            	<input type="text" name="apellido" placeholder="Aquí su apellido..."/>
-            	<br/>
-            	<label for="pais">País:</label>
-            	<select name="pais" id="pais">
-                	<option value="ES" name="opt-pais1" selected>España</option>
-                	<option value="PT" name="opt-pais2">Portugal</option>
-                	<option value="AN" name="opt-pais3">Andorra</option>
-                	<option value="FR" name="opt-pais4">Francia</option>
-                	<option value="AT" name="opt-pais5" disabled>Atlantida</option>
-            	</select>
-                <label for="provincia">Provincia:</label>
-            	<select name="provincia" id="provincia">
-                	<option value="MAD" name="optProv1" selected>Madrid</option>
-                	<option value="BCN" name="optProv2">Barcelona</option>
-                	<option value="VAL" name="optProv3">Valencia</option>
-                	<option value="SEV" name="optProv4">Sevilla</option>
-            	</select>
-            	<br/>
-            	<input type="button" name="btnDeshabilitado" value="En construcción" disabled>
-            	<br/>
-            	<input type="reset" value="Limpiar" name="btn-limpiar"/>
-            	<br/>
-            	<input type="submit" value="Enviar" name="btn-enviar"/>
-        		</fieldset>
-    		</form>       	 
-	</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Selectores por atributo - [TU NOMBRE O SIGLAS]</title>
+    <style>
+      /* CAMBIO 1: Texto en chartreuse para cualquier elemento con atributo selected */
+      [selected] {
+        color: chartreuse;
+        font-size: 18px; 
+      }
+
+      /* CAMBIO 2: Fondo gris si tiene atributo disabled */
+      [disabled] {
+        background-color: lightslategray;
+        color: white; 
+      }
+
+      /* CAMBIO 3: Fuente especial en elementos con name="provincia" */
+      [name="provincia"] {
+        font-family: cursive;
+        font-size: 16px; 
+      }
+
+      /* CAMBIO 4: Input con placeholder que incluya la palabra "su" */
+      [placeholder~="su"] {
+        border: 2px solid red;
+        padding: 4px; 
+      }
+
+      /* CAMBIO 5: Cualquier name que empiece por "opt-" */
+      [name|="opt"] {
+        font-style: oblique;
+      }
+
+      /* CAMBIO 6: Cualquier name que empiece exactamente por "opt" */
+      [name^="opt"] {
+        font-weight: bolder;
+      }
+
+      /* CAMBIO 7: Cualquier name que termine en "ado" */
+      [name$="ado"] {
+        background-color: gainsboro;
+        padding: 2px; 
+      }
+
+      /* CAMBIO 8: Cualquier type que contenga "ex" */
+      [type*="ex"] {
+        background-color: antiquewhite;
+        margin: 3px;
+        border-radius: 4px; 
+      }
+
+      /* ESTILO EXTRA añadido para el form */
+      form {
+        border: 2px solid #888; 
+        padding: 15px;          
+        width: 350px;           
+        font-family: Arial, sans-serif; 
+      }
+
+      fieldset {
+        background-color: #f7f7f7; 
+        border-radius: 5px;       
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Dirección:</legend>
+
+        <label for="nombre">Introduzca su nombre:</label>
+        <input type="text" name="nombre" placeholder="Aquí su nombre..." />
+        <br />
+
+        <label for="apellido">Introduzca su apellido:</label>
+        <input type="text" name="apellido" placeholder="Aquí su apellido..." />
+        <br />
+
+        <label for="pais">País:</label>
+        <select name="pais" id="pais">
+          <option value="ES" name="opt-pais1" selected>España</option>
+          <option value="PT" name="opt-pais2">Portugal</option>
+          <option value="AN" name="opt-pais3">Andorra</option>
+          <option value="FR" name="opt-pais4">Francia</option>
+          <option value="AT" name="opt-pais5" disabled>Atlantida</option>
+        </select>
+
+        <label for="provincia">Provincia:</label>
+        <select name="provincia" id="provincia">
+          <option value="MAD" name="optProv1" selected>Madrid</option>
+          <option value="BCN" name="optProv2">Barcelona</option>
+          <option value="VAL" name="optProv3">Valencia</option>
+          <option value="SEV" name="optProv4">Sevilla</option>
+        </select>
+        <br />
+
+        <input
+          type="button"
+          name="btnDeshabilitado"
+          value="En construcción"
+          disabled
+        />
+        <br />
+
+        <input type="reset" value="Limpiar" name="btn-limpiar" />
+        <br />
+
+        <input type="submit" value="Enviar" name="btn-enviar" />
+      </fieldset>
+    </form>
+  </body>
 </html>
