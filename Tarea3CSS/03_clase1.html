@@ -4,24 +4,48 @@
   <meta charset="UTF-8">
   <title>Ejemplo de Clases en HTML</title>
   <style>
-body{
-    background-color: rgb(82, 49, 143);
+/* Color de fondo modificado */
+body {
+  background-color: rgb(82, 49, 143);
+  font-family: Arial, sans-serif;
+  padding: 20px;
 }
-.red{
-color: red;
+
+/* Clase red modificada */
+.red {
+  color: red;
+  text-decoration: underline;
 }
-.bold{
-font-weight: bold;
+
+/* Clase bold modificada */
+.bold {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+/* Nueva clase añadida para resaltar */
+.resaltado {
+  background-color: yellow;
+  border-radius: 4px;
+  padding: 3px;
 }
   </style>
 </head>
 <body>
+
   <h2 class="red bold">
     Este título combina los estilos aplicados de la clase "red"
     y "bold".
   </h2>
+
   <p>A este párrafo no se le ha aplicado ninguna clase.</p>
+
   <p class="red">Pero a este sí</p>
+
   <div class="bold">Y a este div también</div>
+
+  <p class="resaltado">Este es un nuevo párrafo con clase "resaltado".</p>
 </body>
 </html>
+
