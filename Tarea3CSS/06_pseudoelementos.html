@@ -2,25 +2,36 @@
 <html>
 <head>
 	<style>
+		/* Añade un símbolo al final de cada párrafo */
     	p::after {
-        		content: '\23F4'!important; /* https://www.compart.com/en/unicode/category/So */
-        		color: #e03574!important;
+        		content: '\23F4' !important; /* símbolo de flecha hacia arriba */
+        		color: #e03574 !important;
         		font-size: 1.5em;
     	}
+
+		/* Añade un símbolo al inicio de cada párrafo */
     	p::before {
-        		content: '\1F6C8'!important; /* https://www.compart.com/en/unicode/category/So */
+        		content: '\1F6C8' !important; /* símbolo de información */
     	}
+
+		/* Aplica estilos a la primera letra de cada párrafo */
     	p::first-letter {
         		font-size: 200%;
         		color: #8A2BE2;
     	}
+
+		/* Aplica estilos a la primera línea de cada párrafo */
     	p::first-line {
         		font-family: sans-serif;
     	}
+
+		/* Cambia el marcador de los elementos de lista <li> */
     	li::marker {
-        		content: '\23F5'!important; /* https://www.compart.com/en/unicode/category/So */
-        		color: #e03574!important;
+        		content: '\23F5' !important; /* símbolo de flecha hacia abajo */
+        		color: #e03574 !important;
     	}
+
+		/* Aplica estilos al texto seleccionado dentro de <li> */
     	li::selection {
         		color: red;
         		background: yellow;
