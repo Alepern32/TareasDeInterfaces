@@ -1,0 +1,39 @@
+.container {
+  background-color: #D3D3D3;
+  width: 460px;
+  height: 460px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px solid rgb(101, 101, 101);
+  box-sizing: border-box;
+  gap: 5px;
+}
+
+.container > div {
+  width: 80px;
+  height: 80px;
+  background-color: #444;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin: 4px;
+}
+
+
+#elem-13{
+    margin: 20px;
+}
+
+#elem-14{
+    margin: 20px;
+}
+
+#elem-15{
+    margin: 20px;
+}

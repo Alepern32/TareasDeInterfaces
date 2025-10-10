@@ -1,0 +1,25 @@
+.container{
+    background-color: #D3D3D3;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(101, 101, 101); 
+    
+}
+
+
+#elem-1, #elem-2, #elem-3, #elem-4{
+    background-color: #2F2F2F;
+    width: 100px;
+    height: 150px;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+
+}
