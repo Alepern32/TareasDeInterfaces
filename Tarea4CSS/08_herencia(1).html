@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <style>
+/* Estilos generales del cuerpo */
+body {
+  font-family: Arial, sans-serif; /* Fuente legible y moderna */
+  color: blueviolet;              /* Color del texto heredado por elementos como h2 */
+  border: 1px dashed gray;        /* Borde punteado alrededor del body */
+  background-color: #f9f9f9;      /* Color de fondo suave para mejorar contraste */
+  padding: 20px;                  /* Espacio interno para que el borde no esté pegado al contenido */
+}
+
+/* Estilo para los artículos con clase 'caja' */
+.caja {
+  width: 250px;                   /* Aumentado el ancho para más espacio de contenido */
+  height: auto;                   /* Altura automática para adaptarse al contenido */
+  border: 2px solid #ccc;         /* Borde gris claro para delimitar cada caja */
+  padding: 20px;                  /* Espacio interno para separar el texto del borde */
+  margin: 20px 0;                 /* Separación vertical entre cajas */
+  background-color: #fff;         /* Fondo blanco para destacar sobre el body */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
+  border-radius: 8px;             /* Bordes redondeados para estética moderna */
+}
+
+/* Estilo para el encabezado h2 */
+h2 {
+  color: inherit;                 /* Hereda el color del body (blueviolet) */
+  font-size: 24px;                /* Tamaño de fuente más grande para destacar */
+  margin-bottom: 10px;           /* Espacio debajo del título */
+}
+
+/* Estilo para los párrafos */
+p {
+  color: initial;                 /* Restaura el color por defecto del navegador (normalmente negro) */
+  font-size: 16px;                /* Tamaño de fuente legible */
+  line-height: 1.5;               /* Espaciado entre líneas para mejor lectura */
+}
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Noticias</h2>
+      <article class="caja">
+        <p>Este es el contenido de la noticia 1.</p>
+      </article>
+      <article class="caja">
+        <p>Este es el contenido de la noticia 2.</p>
+      </article>
+    </section>
+  </body>
+</html>

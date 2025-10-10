@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>@scope en CSS</title>
+  <style>
+    /* Estilo general para todos los <h2> fuera de cualquier scope */
+    h2 {
+      color: blue; /* Color azul por defecto */
+    }
+
+    /*
+      Scoped styles: solo se aplican a los elementos que están dentro del contenedor .articulo.
+      Esto permite encapsular estilos sin afectar el resto del documento.
+    */
+    @scope (.articulo) {
+      h2 {
+        color: crimson; /* Color rojo oscuro solo dentro de .articulo */
+      }
+      p {
+        font-style: italic; /* Texto en cursiva solo dentro de .articulo */
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Este encabezado está fuera del scope, así que se aplica el estilo global (azul) -->
+  <h2>Este h2 es azul (regla global)</h2>
+
+  <!-- Dentro del contenedor .articulo, se aplican los estilos definidos en @scope -->
+  <div class="articulo">
+    <h2>Este h2 es rojo (scope)</h2>
+    <p>Párrafo en cursiva solo dentro del scope.</p>
+  </div>
+
+  <!-- Este encabezado también está fuera del scope, así que vuelve a ser azul -->
+  <h2>Este h2 vuelve a ser azul</h2>
+</body>
+</html>

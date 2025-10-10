@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Especificidad en CSS</title>
+    <style>
+    /* Selector de etiqueta: se aplica a todos los <div> */
+    div {
+      background: lightgray;     /* Color de fondo por defecto para todos los div */
+      color: black;              /* Color del texto */
+      padding: 10px;             /* Espaciado interno */
+      margin-bottom: 10px;       /* Separación entre bloques */
+      border: 1px solid #999;    /* Borde para visualización clara */
+    }
+
+    /* Selector de clase: se aplica a cualquier elemento con class="container" */
+    .container {
+      background: lightblue;     /* Sobrescribe el fondo del div si tiene esta clase */
+    }
+
+    /* Selector de id: se aplica al elemento con id="element" */
+    #element {
+      background: lightgreen;    /* Tiene mayor especificidad que la clase */
+    }
+
+    /* Selector combinado: se aplica a <p> dentro de una <section> con class="container" */
+    section .container p {
+      background: yellow;        /* Muy específico: solo afecta a ese contexto */
+      padding: 10px;             /* Añade espaciado para consistencia */
+      border: 1px dashed #aaa;   /* Borde para distinguirlo visualmente */
+    }
+
+    /* Selector con !important: fuerza la prioridad sobre cualquier otro estilo */
+    .forzado {
+      background: orange !important; /* Gana incluso sobre estilos inline */
+    }
+  </style>
+  </head>
+  <body>
+    <h2>Ejemplo de especificidad</h2>
+
+    <!-- Este div tiene clase y id, el fondo será lightgreen por el id -->
+    <div class="container" id="element">
+      Soy un div con <strong>id="element"</strong>
+      y <strong>class="container"</strong>
+    </div>
+
+    <!-- Este párrafo está dentro de una section y tiene class="container",
+       por lo tanto se aplica el selector combinado -->
+    <section>
+      <p class="container">Soy un párrafo con class="container"
+        dentro de una section</p>
+    </section>
+
+    <!-- Este div tiene clase, id, estilo inline y clase con !important.
+       El fondo será naranja por el !important -->
+    <div class="container forzado" id="element" style="background: pink;">
+      Tengo de todo: <br>
+      - selector de etiqueta (div)<br>
+      - clase (container)<br>
+      - id (element)<br>
+      - estilo inline (background: pink)<br>
+      - clase con !important (forzado)
+    </div>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que el diseño sea responsive -->
+    <style>
+/* Estilos generales del cuerpo */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* Fuente moderna y clara */
+  color: #6a0dad;                             /* Color púrpura más vibrante */
+  border: 1px dashed #ccc;                    /* Borde punteado más suave */
+  background-color: #f0f0f5;                  /* Fondo gris claro para mejor contraste */
+  padding: 20px;                              /* Espacio interno general */
+  margin: 0;                                  /* Elimina margen por defecto */
+}
+
+/* Contenedor de las noticias */
+section {
+  max-width: 800px;                           /* Limita el ancho en pantallas grandes */
+  margin: 0 auto;                             /* Centra el contenido horizontalmente */
+}
+
+/* Estilo para los artículos con clase 'caja' */
+.caja {
+  width: 100%;                                /* Ocupa todo el ancho disponible */
+  box-sizing: border-box;                     /* Incluye padding y borde en el ancho total */
+  border: 1px solid #ddd;                     /* Borde más sutil */
+  padding: 20px;                              /* Espacio interno */
+  margin-bottom: 20px;                        /* Separación entre cajas */
+  background-color: #fff;                     /* Fondo blanco para destacar */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);       /* Sombra suave para profundidad */
+  border-radius: 10px;                        /* Bordes redondeados */
+  transition: transform 0.3s ease;            /* Animación al pasar el mouse */
+}
+
+/* Efecto hover para dar interactividad */
+.caja:hover {
+  transform: scale(1.02);                     /* Agranda ligeramente la caja al pasar el mouse */
+}
+
+/* Estilo para el encabezado h2 */
+h2 {
+  color: inherit;                             /* Hereda el color del body */
+  font-size: 28px;                            /* Tamaño más grande para destacar */
+  margin-bottom: 20px;                        /* Espacio debajo del título */
+  text-align: center;                         /* Centra el título */
+}
+
+/* Estilo para los párrafos */
+p {
+  color: #333;                                /* Color de texto más oscuro para mejor legibilidad */
+  font-size: 17px;                            /* Tamaño ligeramente mayor */
+  line-height: 1.6;                           /* Espaciado entre líneas */
+  margin: 0;                                  /* Elimina margen por defecto */
+}
+
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Noticias</h2>
+      <article class="caja">
+        <p>Este es el contenido de la noticia 1.</p>
+      </article>
+      <article class="caja">
+        <p>Este es el contenido de la noticia 2.</p>
+      </article>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>@layer en CSS</title>
+  <style>
+    /* Declaramos las capas en orden de prioridad: 
+       la última tiene mayor prioridad si hay conflicto */
+    @layer reset, base, theme;
+
+    /* Capa 'reset': se usa para eliminar estilos por defecto del navegador */
+    @layer reset {
+      button {
+        all: unset;              /* Elimina todos los estilos por defecto del botón */
+        background: none;        /* Fondo transparente */
+        color: black;            /* Color de texto negro */
+      }
+    }
+
+    /* Capa 'base': define estilos básicos comunes para los botones */
+    @layer base {
+      button {
+        padding: 10px 20px;      /* Espaciado interno horizontal y vertical */
+        border: 1px solid gray;  /* Borde gris */
+        background: lightgray;   /* Fondo gris claro */
+        color: black;            /* Color de texto negro */
+      }
+    }
+
+    /* Capa 'theme': define el diseño visual final del botón */
+    @layer theme {
+      button {
+        background: indigo;      /* Sobrescribe el fondo con color índigo */
+        color: white;            /* Cambia el color del texto a blanco */
+        border-radius: 8px;      /* Bordes redondeados */
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Ejemplo con @layer</h2>
+
+  <!-- Este botón será afectado por las tres capas:
+       1. reset elimina estilos por defecto
+       2. base aplica estilos básicos
+       3. theme aplica el diseño final (colores y bordes redondeados) -->
+  <button>Botón con capas</button>
+</body>
+</html>
